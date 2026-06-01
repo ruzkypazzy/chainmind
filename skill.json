@@ -1,0 +1,21 @@
+{
+  "name": "chainmind",
+  "version": "1.0.0",
+  "description": "Multi-modal onchain intelligence combining visual analysis, document parsing, transaction pattern recognition, cross-chain correlation, and natural language to onchain actions",
+  "author": "Developer",
+  "supported_chains": ["ethereum", "polygon", "arbitrum", "base", "optimism", "solana", "pacific_mainnet", "atlantic_testnet"],
+  "capabilities": [
+    "visual_chart_analysis",
+    "document_intelligence",
+    "transaction_pattern_analysis",
+    "cross_modal_correlation",
+    "nl_to_onchain_actions"
+  ],
+  "dependencies": {
+    "prediction": "openai/gpt-4-vision or equivalent vision model",
+    "nlp": "LangChain with OpenAI GPT-4",
+    "web3": "viem for blockchain data"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/ruzkypazzy/chainmind"
+}

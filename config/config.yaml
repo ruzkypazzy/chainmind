@@ -1,0 +1,32 @@
+api_keys:
+  openai: "${OPENAI_API_KEY}"
+  
+chains:
+  ethereum:
+    chain_id: 1
+    rpc_url: "https://eth.llamarpc.com"
+  polygon:
+    chain_id: 137
+    rpc_url: "https://polygon-rpc.com"
+  arbitrum:
+    chain_id: 42161
+    rpc_url: "https://arb1.arbitrum.io/rpc"
+  base:
+    chain_id: 8453
+    rpc_url: "https://mainnet.base.org"
+  optimism:
+    chain_id: 10
+    rpc_url: "https://mainnet.optimism.io"
+  solana:
+    chain_id: "mainnet"
+    rpc_url: "https://api.mainnet-beta.solana.com"
+  pacific_mainnet:
+    chain_id: 1672
+    rpc_url: "https://rpc.pacific.xyz"
+  atlantic_testnet:
+    chain_id: 688689
+    rpc_url: "https://rpc.atlantic.testnet.pharos.com"
+
+analysis:
+  cache_ttl: 300
+  max_results: 50
