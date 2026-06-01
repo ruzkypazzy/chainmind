@@ -18,4 +18,3 @@ pharos:
 analysis:
   cache_ttl: 300
   max_results: 50
-  default_chain: "pacific_mainnet"
