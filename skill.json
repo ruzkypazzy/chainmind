@@ -1,9 +1,12 @@
 {
   "name": "chainmind",
   "version": "1.0.0",
-  "description": "Multi-modal onchain intelligence combining visual analysis, document parsing, transaction pattern recognition, cross-chain correlation, and natural language to onchain actions",
+  "description": "Multi-modal onchain intelligence skill for Pharos Network - combining visual analysis, document parsing, transaction pattern recognition, cross-chain correlation, and natural language to onchain actions",
   "author": "Developer",
-  "supported_chains": ["ethereum", "polygon", "arbitrum", "base", "optimism", "solana", "pacific_mainnet", "atlantic_testnet"],
+  "supported_chains": [
+    "pacific_mainnet",
+    "atlantic_testnet"
+  ],
   "capabilities": [
     "visual_chart_analysis",
     "document_intelligence",
@@ -14,7 +17,19 @@
   "dependencies": {
     "prediction": "openai/gpt-4-vision or equivalent vision model",
     "nlp": "LangChain with OpenAI GPT-4",
-    "web3": "viem for blockchain data"
+    "web3": "viem for Pharos blockchain data"
+  },
+  "pharos": {
+    "mainnet": {
+      "chain_id": 1672,
+      "name": "Pharos Pacific Mainnet",
+      "rpc_url": "https://rpc.pharoslabs.xyz"
+    },
+    "testnet": {
+      "chain_id": 688689,
+      "name": "Pharos Atlantic Testnet",
+      "rpc_url": "https://rpc.testnet.pharos.xyz"
+    }
   },
   "license": "MIT",
   "repository": "https://github.com/ruzkypazzy/chainmind"
