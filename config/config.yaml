@@ -1,3 +1,10 @@
+# ChainMind configuration
+#
+# Chain data here mirrors the asset bundle in the official
+# `pharos-skill-engine` (https://github.com/PharosNetwork/pharos-skill-engine)
+# so ChainMind works out of the box on Pharos Pacific Mainnet
+# and Pharos Atlantic Testnet.
+
 api_keys:
   openai: "${OPENAI_API_KEY}"
 
@@ -5,16 +12,18 @@ pharos:
   pacific_mainnet:
     chain_id: 1672
     name: "Pharos Pacific Mainnet"
-    rpc_url: "https://rpc.pharoslabs.xyz"
-    explorer_url: "https://explorer.pharos.xyz"
-    symbol: "PHAR"
+    rpc_url: "https://rpc.pharos.xyz"
+    explorer_url: "https://www.pharosscan.xyz"
+    symbol: "PROS"
   atlantic_testnet:
     chain_id: 688689
     name: "Pharos Atlantic Testnet"
-    rpc_url: "https://rpc.testnet.pharos.xyz"
-    explorer_url: "https://explorer.testnet.pharos.xyz"
-    symbol: "tPHAR"
+    rpc_url: "https://atlantic.dplabs-internal.com"
+    explorer_url: "https://atlantic.pharosscan.xyz"
+    symbol: "PHRS"
 
 analysis:
-  cache_ttl: 300
-  max_results: 50
+  cache_ttl_seconds: 300
+  max_results_per_query: 50
+  default_openai_model: "gpt-4o"
+  default_openai_mini_model: "gpt-4o-mini"
