@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+.env
+.DS_Store
+.idea/
+.vscode/
+# Local output of main.py
+chainmind-out.json
+# Local OpenAI key if someone runs --api-key via shell script
+.api-key
