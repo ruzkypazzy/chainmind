@@ -1,18 +1,37 @@
 {
   "name": "chainmind",
-  "version": "1.0.0",
-  "description": "Multi-modal onchain intelligence for Pharos Network",
-  "author": "Developer",
+  "version": "0.2.0",
+  "description": "Multi-modal onchain intelligence for the Pharos Network — vision, document, transaction, cross-chain, and NLP-to-action in one skill.",
+  "author": "ruzkypazzy",
   "supported_chains": ["pacific_mainnet", "atlantic_testnet"],
-  "capabilities": ["visual_chart_analysis", "document_intelligence", "transaction_pattern_analysis", "cross_modal_correlation", "nl_to_onchain_actions"],
+  "capabilities": [
+    "visual_chart_analysis",
+    "document_intelligence",
+    "transaction_pattern_analysis",
+    "cross_modal_correlation",
+    "nl_to_onchain_actions"
+  ],
   "dependencies": {
-    "prediction": "openai/gpt-4-vision",
-    "nlp": "LangChain with OpenAI GPT-4",
-    "web3": "requests for Pharos RPC"
+    "vision":    "openai (gpt-4o vision)",
+    "documents": "openai (gpt-4o-mini)",
+    "nlp":       "openai (gpt-4o-mini)",
+    "web3":      "requests (JSON-RPC over HTTP)"
   },
   "pharos": {
-    "mainnet": {"chain_id": 1672, "rpc_url": "https://rpc.pharoslabs.xyz"},
-    "testnet": {"chain_id": 688689, "rpc_url": "https://rpc.testnet.pharos.xyz"}
+    "pacific_mainnet": {
+      "chain_id":     1672,
+      "name":         "Pharos Pacific Mainnet",
+      "rpc_url":      "https://rpc.pharos.xyz",
+      "explorer_url": "https://www.pharosscan.xyz",
+      "symbol":       "PROS"
+    },
+    "atlantic_testnet": {
+      "chain_id":     688689,
+      "name":         "Pharos Atlantic Testnet",
+      "rpc_url":      "https://atlantic.dplabs-internal.com",
+      "explorer_url": "https://atlantic.pharosscan.xyz",
+      "symbol":       "PHRS"
+    }
   },
   "license": "MIT",
   "repository": "https://github.com/ruzkypazzy/chainmind"
