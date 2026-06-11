@@ -105,17 +105,39 @@ Optional:
 - `pypdf>=4.0.0` — only needed for PDF document parsing
   (uncomment the line in `requirements.txt` if you need it)
 
-## Installation
+## Install
+
+### 1. Install Foundry (the engine the skill is built on)
 
 ```bash
-git clone https://github.com/ruzkypazzy/chainmind.git
-cd chainmind
-pip install -r requirements.txt
-
-# Only needed for vision / document / NLP modules
-export OPENAI_API_KEY=sk-...
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
 ```
 
+Verify with `cast --version`. This gives you `cast`, `forge`, `anvil`, and `chisel` on your `$PATH`.
+
+### 2. Install jq (used to parse JSON)
+
+```bash
+# macOS
+brew install jq
+# Debian/Ubuntu/Termux
+apt install -y jq
+# Alpine
+apk add jq
+```
+
+Verify with `jq --version`.
+
+### 3. Get the skill
+
+```bash
+git clone https://github.com/ruzkypazzy/chainmind
+cd chainmind
+chmod +x scripts/*.sh
+```
+
+That's it. No `pip install`, no `npm install`, no `forge build`, no compile. The skill is one or more bash scripts that use `cast` (from Foundry) for every RPC read. The `assets/networks.json` file already knows the Pharos Pacific Mainnet and Atlantic Testnet endpoints.
 ## Usage
 
 ### 1. Track a wallet across both Pharos chains
