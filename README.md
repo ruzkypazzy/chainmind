@@ -197,6 +197,28 @@ python src/main.py --task "compare chains" --address 0xYourWallet
 **Pharos Agent Center** — Skill Builder Campaign
 (`https://silken-muskox-24e.notion.site/pharos-agent-center-skill-builder-campaign`)
 
+
+## Tests
+
+```bash
+pytest tests/ -v  # or: bash scripts/cli.sh demo
+```
+
+The test suite covers the engine's heuristics, the JSON output schema, and (when run with `cast` installed) a live RPC smoke test against Pharos Pacific Mainnet.
+
+## Repository layout
+
+```
+.
+├── README.md                  # this file
+├── SKILL.md                   # Agent-side description (loaded by Claude/Codex/etc.)
+├── scripts/
+│   └── cli.sh          # bash + cast engine — the entire skill
+├── assets/
+│   └── networks.json          # Pharos Skill Engine network config
+└── tests/
+    └── test_*.sh              # bash smoke test
+```
 ## License
 
 MIT License — see [`LICENSE`](./LICENSE).
